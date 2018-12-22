@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/website.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div id="menu">
+    <ul>
+        <li><a>DASHBOARD</a></li>
+        <li><a>PEOPLE</a></li>
+        <li><a>CAMERAS</a></li>
+        <li><a>REPORTES</a></li>
+    </ul>
+</div>
+
+<div id="top_buttons">
+    Vizcaya Site, Medellín
+</div>
+
+
+<div id="content">
+    <div id="center_bar" class="w3-container w3-cell" style="width:70%; height:800px">
+        <div id="camera_1" class="w3-container" style="height:45%">
+             CAMARA 1
+        </div>
+
+        <div class="w3-container" style="height:5%"></div>
+
+        <div id="camera_2" class="w3-container" style="height:45%">
+           {% block content %}
+           {% endblock %}
+        </div>
+    </div>
+
+    <div class="w3-container w3-cell" style="width:5%"> </div>
+
+    <div id="left_bar" class="w3-container w3-cell" style="width:30%">
+        <h2>Face Recognition</h2>
+        <p>Website de Face Recognition.</p>
+    </div>
+</div>
+
+</body>
+
+</html>

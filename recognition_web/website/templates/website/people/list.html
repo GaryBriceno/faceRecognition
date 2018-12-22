@@ -1,0 +1,31 @@
+{% extends "website/base.html" %}
+
+{% block title %}My Website{% endblock %}
+
+{% block content %}
+    <div>
+    <table>
+        <thead>
+            <th width="280px">Glober</th>
+            <th width="90px">Site</th>
+            <th width="180px">Position</th>
+        </thead>
+        <tbody>
+    {% for people in peoples %}
+        <tr>
+            <td>
+                <a href="{{ people.get_absolute_url }}">{{ people.get_full_name }}</a>
+            </td>
+            <td>
+                {{ people.country_site }}
+            </td>
+            <td>
+                {{ people.position}}
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+{% endblock %}

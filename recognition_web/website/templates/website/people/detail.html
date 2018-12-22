@@ -1,0 +1,9 @@
+{% extends "website/base.html" %}
+
+{% block title %}{{ people.get_full_name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ people.get_full_name }}</h1>
+    <p class="date">Site: {{ people.country_site }} - Position: {{ people.position}}</p>
+
+{% endblock %}
